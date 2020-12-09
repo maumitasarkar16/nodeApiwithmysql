@@ -6,4 +6,13 @@ module.exports = app => {
 
      // Retrieve a single Customer with customerId
     app.get("/customers/:customerId", customers.findOne);
+
+    // Retrieve all Customers
+    app.get("/customers", customers.findAll);
+
+     // Update a Customer with customerId
+    app.put("/customers/:customerId", customers.update);
+
+    // Delete a Customer with customerId
+    app.delete("/customers/:customerId", customers.delete);
 };     
